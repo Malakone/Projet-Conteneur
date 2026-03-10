@@ -14,7 +14,9 @@ Ce projet démontre une chaîne de livraison complète pour une application clou
 
 commande: docker build -t techlogix-inventory:local .
 
- Cette image l'illustre  ![Build image docker](https://i.imgur.com/jaPxkYU.png)
+ Cette image l'illustre  
+ 
+ ![Build image docker](https://i.imgur.com/jaPxkYU.png)
 
 
 
@@ -30,7 +32,9 @@ On a ensuite verifier si l'image s'affiche avec l'URL ci-dessous
 
 URL: http://localhost:3000
 
-Cette image nous le montre ![Test image en local](https://i.imgur.com/X29ONsp.jpeg)
+Cette image nous le montre 
+
+![Test image en local](https://i.imgur.com/X29ONsp.jpeg)
 
 
 
@@ -39,14 +43,17 @@ Cette image nous le montre ![Test image en local](https://i.imgur.com/X29ONsp.jp
 
 .Build de l'image Docker
 
-.Connexion à Docker Hub
+.Connexion à Docker 
+
 ![workflow avec GitHub Action](https://i.imgur.com/i6LgEiE.jpeg)
 
 .Push de l'image avec les tags latest et v1.0
 
 On a ensuite pousser l'image dans DockerHub
 
-Cette image nous montre l'image avec ses differentes version  ![Push de l'image sur DockerHub](https://i.imgur.com/DOpvxtw.jpeg)
+Cette image nous montre l'image avec ses differentes version  
+
+![Push de l'image sur DockerHub](https://i.imgur.com/DOpvxtw.jpeg)
 
 
 # V. Déploiement Kubernetes
@@ -80,9 +87,7 @@ Commande 2:  kubectl get deployments
 Commande 3:  kubectl get services
 
 
-
 ![verification du deploiement](https://i.imgur.com/6pyB33n.png)
-
 
 
 3. Accéder à l'application
