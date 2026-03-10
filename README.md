@@ -10,30 +10,31 @@ Ce projet démontre une chaîne de livraison complète pour une application clou
 
 
 
-Construire l'image Docker
+# I. Construire l'image Docker
 
 commande: docker build -t techlogix-inventory:local .
 
-![Build image docker](https://imgur.com/jaPxkYU)
+ Cette image l'illustre  ![Build image docker](https://imgur.com/jaPxkYU)
 
 
 
-Lancer le conteneur
+# II. Lancer le conteneur
 
-commande: "docker run -d -p 3000:3000 --name inventory-test techlogix-inventory:local"
+commande:  docker run -d -p 3000:3000 --name inventory-test techlogix-inventory:local
 
 ![run docker](https://imgur.com/nO7DgfD)
 
 
-Tester l'application
+# III. Tester l'application
+On a ensuite verifier si l'image s'affiche avec l'URL ci-dessous
 
 URL: http://localhost:3000
 
-![Test image en local](https://imgur.com/fV2cKpY)
+Cette image nous le montre ![Test image en local](https://imgur.com/fV2cKpY)
 
 
 
-Pipeline automatisé avec Github Action
+# IV. Pipeline automatisé avec Github Action
 À chaque git push sur la branche main :
 
 .Build de l'image Docker
@@ -42,10 +43,13 @@ Pipeline automatisé avec Github Action
 ![workflow avec GitHub Action](https://imgur.com/i6LgEiE)
 
 .Push de l'image avec les tags latest et v1.0
+
+On a ensuite pousser l'image dans DockerHub
+
 ![Push de l'image sur DockerHub](https://imgur.com/DOpvxtw)
 
 
-Déploiement Kubernetes
+# V. Déploiement Kubernetes
 
 1. Démarrer Minikube
 
@@ -57,21 +61,22 @@ commande: minikube start --driver=docker --memory=2560 --cpus=2
 
 2. Déployer l'application
 
-# Appliquer les manifests
+## Appliquer les manifests
 
-kubectl apply -f k8s/deployment.yml"
+Commande 1:  kubectl apply -f k8s/deployment.yml"
 
-kubectl apply -f k8s/service.yml"
+Commande 2:  kubectl apply -f k8s/service.yml"
 
 ![Application de deployment et service](https://imgur.com/6gIQKO4)
 
 
-# Vérifier le déploiement
-kubectl get 
+## Vérifier le déploiement
 
-kubectl get deployments
+Commande 1:  kubectl get 
 
-kubectl get services
+Commande 2:  kubectl get deployments
+
+Commande 3:  kubectl get services
 
 ![verification du deploiement](https://imgur.com/6pyB33n)
 
@@ -79,7 +84,9 @@ kubectl get services
 
 3. Accéder à l'application
 
-minikube service techlogix-inventory-service --url
+On a reussi a deploiyer l'application avec Kubernetes grace a l'IP du cluster
+
+Commande:  minikube service techlogix-inventory-service --url
 
 URL: http://127.0.0.1:61345
 
@@ -88,7 +95,7 @@ URL: http://127.0.0.1:61345
 
 
 
-Quelques commandes utiles:
+# Quelques commandes utiles:
 docker images,
 
 docker ps -a,
