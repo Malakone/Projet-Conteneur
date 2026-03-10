@@ -8,20 +8,6 @@ Ce projet démontre une chaîne de livraison complète pour une application clou
 - **Orchestration** avec Kubernetes (Minikube)
 
 
-📁 Projet-Conteneur/
-├── 📁 app/
-│ ├── 📄 server.js # Application Node.js/Express
-│ └── 📄 package.json # Dépendances
-├── 📁 .github/
-│ └── 📁 workflows/
-│ └── 📄 docker-build-push.yml # Pipeline CI/CD
-├── 📁 k8s/
-│ ├── 📄 deployment.yml # Déploiement Kubernetes (3 réplicas)
-│ └── 📄 service.yml # Service NodePort
-├── 📄 Dockerfile # Configuration de l'image Docker
-├── 📄 .dockerignore # Fichiers exclus de l'image
-├── 📄 .env.example # Variables d'environnement exemple
-└── 📄 README.md # Documentation
 
 
 Construire l'image Docker
@@ -70,13 +56,20 @@ URL: http://127.0.0.1:61345
 ![Acceder a l'applicaion via l'IP du cluster](https://imgur.com/ic12mHh)
 
 Quelques commandes utiles:
-docker images
-docker ps -a
-docker stop <nom conteneur>
-docker rm <nom conteneur>
-kubectl delete -f <nom fichier>
-minikube stop
-minikube delete
+docker images,
+
+docker ps -a,
+
+docker stop <nom conteneur>,
+
+docker rm <nom conteneur>,
+
+kubectl delete -f <nom fichier>,
+
+minikube stop,
+
+minikube delete,
+
 minikube dashboard
 
 
